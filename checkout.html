@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKOUT-Bhagat Ji Fast Food</title>
+
+    <link rel="stylesheet" href="checkout.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="resources/icons/favicon head.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+        <a href="index.html"><img class="checkout-logo" src="resources/images/fianlise logo BJFF.png" alt=""></a>
+        <a href="#index.html">HOME</a>
+        <a href="#footer">CONTACT</a>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/bhagatjifastfood2000?igsh=NTc4MTIwNjQ2YQ=="><img
+                    src="resources/icons/instagram.svg" alt=""></a>
+            <a href="https://www.facebook.com/profile.php?id=100064043973069&mibextid=ZbWKwL"><img
+                    src="resources/icons/facebook.svg" alt=""></a>
+            <a href="https://mail.google.com/mail/"><img src="resources/icons/gmail-new.png" alt=""></a>
+            <a href="https://maps.app.goo.gl/qwwWYin4bbaE8Z9D8"><img src="resources/icons/google-maps.svg" alt=""></a>
+        </div>
+
+    </div>
+
+    <!-- MAIN CHECKOUT -->
+
+    <div class="container" id="home">
+        <div class="cart-section">
+            <h2>Your Cart</h2>
+            <div class="cart" id="cart">
+                <!-- Cart items will be displayed here -->
+                <div class="subtotal">
+                    Subtotal: <span id="subtotal">$0.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-section">
+            <h1>Checkout</h1>
+            <form>
+                <label for="fullname">Full Name:</label>
+                <input class="form-textbox" type="text" id="fullname" name="fullname" placeholder="Name" required>
+
+                <label for="email">Email:</label>
+                <input class="form-textbox" type="email" id="email" name="email" placeholder="E-mail" required>
+
+                <label for="phone">Phone number:</label>
+                <input class="form-textbox" type="tel" id="phone" name="phone" placeholder="Phone number" required>
+
+                <label for="address">Address:</label>
+                <input class="form-textbox" type="text" id="address" name="address" placeholder="Address" required>
+
+                <label for="city">City:</label>
+                <input class="form-textbox" type="text" id="city" name="city" placeholder="City" required>
+
+                <label for="state">State:</label>
+                <input class="form-textbox" type="text" id="state" name="state" placeholder="State" required>
+
+                <label for="zip">ZIP Code:</label>
+                <input class="form-textbox" type="text" id="zip" name="zip" placeholder="ZIP Code" required>
+
+                <label for="country">Country:</label>
+                <select class="country-select" id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="IN">India</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="payment-method">Payment Method:</label>
+                <select class="payment-select country-select" id="payment-method" name="payment-method"
+                    onchange="toggleCardDetails()">
+                    <option value="card">Credit Card</option>
+                    <option value="cash">Cash on Delivery</option>
+                </select>
+
+                <!-- Card details -->
+                <div id="card-details" class="card-details">
+                    <label for="card-number">Card Number:</label>
+                    <input class="form-textbox" type="text" id="card-number" name="card-number"
+                        placeholder="Card Number">
+
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input class="form-textbox" type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY"
+                        maxlength="5" pattern="(0[1-9]|1[0-2])\/([0-9]{2})">
+
+                    <label for="cvv">CVV:</label>
+                    <input class="form-textbox" type="text" id="cvv" name="cvv" placeholder="CVV">
+                </div>
+
+                <input class="place-order-button" type="submit" value="Place Order">
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer" id="footer">
+        <div class="footer-left">
+            <img src="resources/images/fianlise logo BJFF.png" alt="">
+            <ul class="footer-nav">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">MAPS</a></li>
+                <li><a href="#">CALL US</a></li>
+            </ul>
+            <p>Bhagat Ji Fast Food © 2024</p>
+        </div>
+        <div class="footer-middle">
+            <h2>About Us:-</h2>
+            <p>Bhagat Ji Fast Food is a beloved spot in Nawanshahr, Punjab, India, catering specifically to vegetarian
+                customers. This makes them stand out in a region where meat-based dishes are often prevalent. They've
+                built a loyal following with their commitment to:</p>
+            <ul>
+                <li>• Fresh, Flavorful Food</li>
+                <li>• Hygienic Practices</li>
+                <li>• Diverse Menu</li>
+                <li>• Family-Friendly Atmosphere</li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <h2>Socials:-</h2>
+            <ul class="social-media">
+                <li><a href="#">• Instagram</a></li>
+                <li><a href="#">• Facebook</a></li>
+                <li><a href="#">• Gmail</a></li>
+                <li><a href="#">• Maps</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- SCROLL TOP BUTTON -->
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+        <p>&#8593;</p>
+    </button>
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>

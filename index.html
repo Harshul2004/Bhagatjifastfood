@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME-Bhagat Ji Fast Food</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="resources/icons/favicon head.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- HEADER + NAVBAR -->
+
+    <div style="position: fixed; width: 100%;">
+
+        <!-- HEADER -->
+
+        <div class="header">
+            <div class="addressheader">
+                <img class="headerimgs" src="resources/icons/location-white.svg" alt="">
+                <span onclick="window.location.href = 'https://maps.app.goo.gl/HVLxeweqbTXUv4XC7'">Railway Road,
+                    Nawanshahr, Punjab, IND</span>
+            </div>
+            <div class="timeheader">
+                <img class="headerimgs" src="resources/icons/schedule-white_24dp.svg" alt="">
+                <span>Daily : 8.00 am to 10.00 pm</span>
+            </div>
+            <div class="callheader">
+                <img class="headerimgs" src="resources/icons/call_white.svg" alt="">
+                <span>+91 9855424308</span>
+            </div>
+            <div class="emailheader">
+                <img class="headerimgs" src="resources/icons/email_white_24dp.svg" alt="">
+                <span onclick="window.location.href = 'https://mail.google.com/'">jangraharshul@gmail.com</span>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+
+        <nav class="nav">
+            <div class="navbar-position-left">
+                <img class="navlogo" src="resources/images/fianlise logo BJFF.png" alt="">
+            </div>
+            <div class="navbar-position-middle">
+                <ul class="navul">
+                    <li class="navli"><a href="#firstpart">HOME</a></li>
+                    <li class="navli"><a href="#range">RANGE</a></li>
+                    <li class="navli"><a href="#fourthpart">ABOUT US</a></li>
+                    <li class="navli"><a href="#menu">MENU</a></li>
+                    <li class="navli"><a href="#events">EVENTS</a></li>
+                    <li class="navli"><a href="#gallery">ALBUM</a></li>
+                    <li class="navli"><a href="#footer">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="navbar-position-right">
+                <button class="nav-button" onclick="window.location.href = 'menu.html'"><p>MENU</p></button>
+                <button class="nav-button" onclick="togglePopup()">LOGIN</button>
+            </div>
+            <div class="navbar-toggle">
+                <button class="toggle-btn">&#9776;</button>
+            </div>
+        </nav>
+        <div class="navbar-overlay">
+            <button class="navbar-close-btn toggle-btn">&#10006;</button>
+        </div>
+    </div>
+
+    <!-- LOGIN PART -->
+
+    <div class="overlay" id="overlay">
+        <div class="popup" id="login">
+            <span class="close" onclick="closePopup()">×</span>
+            <div class="logo-login">
+                <img src="resources/images/fianlise logo BJFF.png" alt="">
+            </div>
+            <h2 class="login-heading">Login</h2>
+            <form class="mainform" id="login-form">
+                <label class="label-style" for="loginUsername">Username</label>
+                <input class="form-textbox" type="text" id="loginUsername" name="loginUsername" placeholder="Username" required>
+
+                <label class="label-style" for="loginPassword">Password</label>
+                <input class="form-textbox" type="password" id="loginPassword" name="loginPassword" placeholder="Password" required>
+
+                <input class="login-submit-button" type="submit" value="LOGIN">
+            </form>
+            <div class="login-link">
+                <p>Don't have an account yet? <a href="#" id="signup-link" onclick="showSignUp()">Sign Up</a></p>
+            </div>
+        </div>
+
+        <div class="popup" id="signup" style="display: none;">
+            <span class="close" onclick="closePopup()">×</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label class="label-style" for="signupUsername">Username</label>
+                <input class="form-textbox" type="text" id="signupUsername" name="signupUsername" placeholder="Username" required>
+
+                <label class="label-style" for="signupEmail">Email</label>
+                <input class="form-textbox" type="email" id="signupEmail" name="signupEmail" placeholder="Email" required>
+
+                <label class="label-style" for="signupPassword">Password</label>
+                <input class="form-textbox" type="password" id="signupPassword" name="signupPassword" placeholder="Password" required>
+
+                <label class="label-style" for="signupConfirmPassword">Confirm Password</label>
+                <input class="form-textbox" type="password" id="signupConfirmPassword" name="signupConfirmPassword" placeholder="Confirm Password" required>
+
+                <input class="login-submit-button" type="submit" value="SIGN UP">
+            </form>
+
+            <div class="login-link">
+                <p>Already have an account? <a href="#" id="signin-link" onclick="showLogin()">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1ST PART -->
+
+    <div class="firstpart" id="firstpart">
+        <h1>For the love of <br> delicious food.</h1>
+        <h2>Come with family & feel the joy of mouthwatering food.</h2>
+    </div>
+
+    <!-- 2ND PART -->
+
+    <div class="secondpart-container" id="range">
+        <div class="secondpart-toppart">
+            <p class="smallheading">FLAVOURS FOR ROYALITY</p>
+            <div class="specialunderline">
+                <img src="resources/icons/image-removebg-preview.png" alt="">
+            </div>
+            <div class="bigheading">
+                <h1>We Offer Top Notch</h1>
+                <p>Fast Food Restaurant offering a diverse range of delectable,<br> quick-served meals, Indian, South
+                    Indian, Chinese, <br>Italian and Snacks with great range of starters.</p>
+            </div>
+        </div>
+        <div class="secondpart-bottompart">
+            <div class="secondpart-bottompart-left">
+                <div class="secondpart-bottompart-style grow">
+                    <img class="" src="resources/images/secondpart-bottompart-left.png" alt="">
+                    <h1 onclick="window.location.href = 'https://www.google.com'">Breakfast</h1>
+                </div>
+            </div>
+            <div class="secondpart-bottompart-middle">
+                <div class="secondpart-bottompart-style grow">
+                    <img src="resources/images/secondpart-bottompart-middle.png" alt="">
+                    <h1 onclick="window.location.href = 'https://www.google.com'">Appetizers</h1>
+                </div>
+            </div>
+            <div class="secondpart-bottompart-right">
+                <div class="secondpart-bottompart-style grow">
+                    <img src="resources/images/secondpart-bottompart-right.png" alt="">
+                    <h1 onclick="window.location.href = 'https://www.google.com'">Drinks</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3RD PART -->
+
+    <div class="third">
+        <div class="third-left">
+            <img src="resources/images/4indian-food.jpg" alt="">
+        </div>
+        <div class="third-right">
+            <div class="badgepic"><img src="resources/images/badge-1.png" alt=""></div>
+            <div class="right-box">
+                <div class="right-container">
+                    <p>POPULAR DISH</p>
+                    <img src="resources/images/image-removebg-preview.png" alt="" height="18px" width="100px">
+                    <h3>Butter Naan with Shahi Paneer</h3>
+                    <h4>Shahi Paneer is a creamy North Indian dish with paneer in a rich gravy of cream and spices.
+                        Served with Butter Naan, a soft flatbread cooked in a tandoor with butter, it's a delicious,
+                        delightful blend of flavors.
+                    </h4>
+                    <div class="price">
+                        <h2>₹340.00</h2>
+                    </div>
+                    <button class="button-new">VIEW ALL MENU</button>
+                </div>
+            </div>
+            <!-- <div class="paneertikkapic">
+                <img src="resources/images/shape-9 (1).png" alt="">
+            </div> -->
+        </div>
+    </div>
+
+    <!-- 4TH PART -->
+
+    <div class="fourthpart" id="fourthpart">
+        <div class="fourthpart-container">
+            <div class="about-text">
+                <h5>our story</h5>
+                <div class="about-text-img"><img src="resources/images/image-removebg-preview.png" alt="" height="18px"
+                        width="110px">
+                </div>
+                <h2 style="text-align: center;">Every Flavor Tells a Story</h2>
+                <p style="text-align: center;">Lorem Ipsum is simply dummy text of the printingand typesetting industry
+                    lorem Ipsum has been the
+                    industrys standard dummy text ever since the when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book It has survived not only five centuries, but also the leap
+                    into.</p>
+                <h4>Book Through Call</h4>
+                <h3>+91 98554-24308</h3>
+                <div class="about-text-btn">
+                    <button class="about-banner-button">READ MORE</button>
+                </div>
+            </div>
+            <div class="about-banner">
+                <img src="resources/images/4th part image.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- 5TH PART -->
+
+    <div class="fifthpart" id="menu">
+        <div class="fifthpart-container">
+            <p>special selection</p>
+            <div class="fifthpart-container-img"><img src="resources/images/image-removebg-preview.png" alt=""
+                    height="18px" width="110px"></div>
+            <h2>Delicious Menu</h2>
+            <div class="grid-part">
+                <div class="grid-part-left">
+                    <div class="grid-part-card">
+                        <div class="grid-part-img "><img src="resources/images/menu-1.png" alt=""></div>
+                        <div class="grid-part-content">
+                            <div class="content-part">
+                                <div class="content-text">Greek Salad</div>
+                                <div class="content-prize">$25.50</div>
+                            </div>
+                            <h6>Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</h6>
+                        </div>
+                    </div>
+                    <div class="grid-part-card">
+                        <div class="grid-part-img"><img src="resources/images/menu-3.png" alt=""></div>
+                        <div class="grid-part-content">
+                            <div class="content-part">
+                                <div class="content-text">Lasagne</div>
+                                <div class="content-prize">$40.00</div>
+                            </div>
+                            <h6>Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</h6>
+                        </div>
+                    </div>
+                    <div class="grid-part-card">
+                        <div class="grid-part-img"><img src="resources/images/menu-5.png" alt=""></div>
+                        <div class="grid-part-content">
+                            <div class="content-part">
+                                <div class="content-text">Butternut Pumpkin</div>
+                                <div class="content-prize">$10.00</div>
+                            </div>
+                            <h6>Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-part-right">
+                    <div class="grid-part-card">
+                        <div class="grid-part-img"><img src="resources/images/menu-2.png" alt=""></div>
+                        <div class="grid-part-content">
+                            <div class="content-part">
+                                <div class="content-text">Tokusen Wagyu</div>
+                                <div class="content-prize">$39.00</div>
+                            </div>
+                            <h6>Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</h6>
+                        </div>
+                    </div>
+                    <div class="grid-part-card">
+                        <div class="grid-part-img"><img src="resources/images/menu-4.png" alt=""></div>
+                        <div class="grid-part-content">
+                            <div class="content-part">
+                                <div class="content-text">Olivas Rellenas</div>
+                                <div class="content-prize">$25.00</div>
+                            </div>
+                            <h6>Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell
+                                pepper.</h6>
+                        </div>
+                    </div>
+                    <div class="grid-part-card">
+                        <div class="grid-part-img"><img src="resources/images/menu-6.png" alt=""></div>
+                        <div class="grid-part-content">
+                            <div class="content-part">
+                                <div class="content-text">Opu Fish</div>
+                                <div class="content-prize">$49.00</div>
+                            </div>
+                            <h6>Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>During winter daily from 7:00 pm to 9:00 pm</h3>
+            <div class="fifthpart-btn">
+                <button class="fifthpart-button" onclick="window.location.href = 'menu.html'">VIEW ALL MENU</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6TH PART -->
+
+    <div class="sixthpart-container" id="events">
+        <div class="sixthpart-toppart">
+            <p class="smallheading">RECENT UPDATES</p>
+            <div class="specialunderline">
+                <img src="resources/icons/image-removebg-preview.png" alt="">
+            </div>
+            <div class="bigheading">
+                <h1>Upcoming Events</h1>
+            </div>
+        </div>
+        <div class="sixthpart-bottompart">
+            <div class="sixthpart-bottompart-left">
+                <div class="sixthpart-bottompart-style grow">
+                    <img src="resources/images/6th part image 1.png" alt="">
+                </div>
+            </div>
+            <div class="sixthpart-bottompart-middle">
+                <div class="sixthpart-bottompart-style grow">
+                    <img src="resources/images/6th part image 2.png" alt="">
+                </div>
+                <div>
+                    <button class="sixthpart-button">VIEW ALL MENU</button>
+                </div>
+            </div>
+            <div class="sixthpart-bottompart-right">
+                <div class="sixthpart-bottompart-style grow">
+                    <img src="resources/images/6th part image 3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7TH PART -->
+
+    <div class="seventhpart-container" id="gallery">
+        <div class="seventhpart-heading">
+            <p class="smallheading">ALBUM</p>
+            <div class="specialunderline">
+                <img src="resources/icons/image-removebg-preview.png" alt="">
+            </div>
+            <h1>Gallery</h1>
+        </div>
+        <div class="seventhpart-grid">
+            <div class="grid-item grow">
+                <img src="resources/images/grid 1.jpg" alt="">
+            </div>
+            <div class="grid-item grow">
+                <img src="resources/images/grid 2.jpg" alt="">
+            </div>
+            <div class="grid-item grow">
+                <img src="resources/images/grid 3.jpg" alt="">
+            </div>
+        </div>
+        <div class="seventhpart-grid">
+            <div class="grid-item grow">
+                <img src="resources/images/grid 5.jpg" alt="">
+            </div>
+            <div class="grid-item grow">
+                <img src="resources/images/grid 6.jpg" alt="">
+            </div>
+            <div class="grid-item grow">
+                <img src="resources/images/grid 7.jpg" alt="">
+            </div>
+        </div>
+        <div class="seventhpart-grid">
+            <div class="grid-item grow">
+                <img src="resources/images/grid 9.jpg" alt="">
+            </div>
+            <div class="grid-item grow">
+                <img src="resources/images/grid 10.jpg" alt="">
+            </div>
+            <div class="grid-item grow">
+                <img src="resources/images/grid 11.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer" id="footer">
+        <div class="footer-left">
+            <img src="resources/images/fianlise logo BJFF.png" alt="">
+            <ul class="footer-nav">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">MAPS</a></li>
+                <li><a href="#">CALL US</a></li>
+            </ul>
+            <p>Bhagat Ji Fast Food © 2024</p>
+        </div>
+        <div class="footer-middle">
+            <h2>About Us:-</h2>
+            <p>Bhagat Ji Fast Food is a beloved spot in Nawanshahr, Punjab, India, catering specifically to vegetarian
+                customers. This makes them stand out in a region where meat-based dishes are often prevalent. They've
+                built a loyal following with their commitment to:</p>
+            <ul>
+                <li>• Fresh, Flavorful Food</li>
+                <li>• Hygienic Practices</li>
+                <li>• Diverse Menu</li>
+                <li>• Family-Friendly Atmosphere</li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <h2>Socials:-</h2>
+            <ul class="social-media">
+                <li><a href="#">• Instagram</a></li>
+                <li><a href="#">• Facebook</a></li>
+                <li><a href="#">• Gmail</a></li>
+                <li><a href="#">• Maps</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- SCROLL TOP BUTTON -->
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+        <p>&#8593;</p>
+    </button>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
