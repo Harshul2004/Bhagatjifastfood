@@ -177,8 +177,7 @@ body {
 }
 
 .toggle-btn {
-    background-color: rgb(189 188 188 / 10%);
-    backdrop-filter: blur(25px);
+    background-color: rgb(21, 22, 22);
     border: 1px solid #e3c38c;
     color: #e3c38c;
     padding: 10px 20px 9px 20px;
@@ -254,8 +253,6 @@ body {
 
     .nav-button {
         width: auto;
-        background-color: rgb(189 188 188 / 10%);
-        backdrop-filter: blur(25px);
     }
 
     .navbar-toggle {
