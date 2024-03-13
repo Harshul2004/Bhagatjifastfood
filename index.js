@@ -14,18 +14,6 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// NAVBAR COLLAPSE SYSTEM
-
-document.querySelector('.toggle-btn').addEventListener('click', function () {
-    document.querySelector('.navul').classList.toggle('active');
-    document.querySelector('.navbar-overlay').classList.toggle('active');
-});
-
-document.querySelector('.navbar-close-btn').addEventListener('click', function () {
-    document.querySelector('.navul').classList.remove('active');
-    document.querySelector('.navbar-overlay').classList.remove('active');
-});
-
 // LOGIN PAGE
 
 function togglePopup() {
@@ -100,3 +88,30 @@ document.getElementById('login-form').addEventListener('submit', function (event
 
     alert("Invalid username or password!");
 });
+
+// NAVBAR COLLAPSE SYSTEM
+
+const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.navul');
+    const header = document.getElementById('header');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 250) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    menuItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
