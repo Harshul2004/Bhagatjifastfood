@@ -1308,7 +1308,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 1600px;
+        height: 1000px;
         margin: 0;
         padding: 0;
     }
@@ -1343,11 +1343,13 @@ body {
     }
 
     .sixthpart-bottompart-style>img {
-        display: flex;
+        /* display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
         padding: 0;
         margin: 0;
+        height: 300px;
+        width: 230px;
     }
 
     .sixthpart-bottompart-style {
