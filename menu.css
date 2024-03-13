@@ -37,7 +37,8 @@ body {
     height: 40px;
     width: 100%;
     font-family: 'Forum';
-    background-color: rgb(21, 22, 22);
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(25px);
     font-weight: 100;
     border-bottom: 0.5px solid #e3c38c;
     z-index: 1000;
@@ -102,7 +103,8 @@ body {
 /* NAVBAR */
 
 .nav {
-    background-color: rgb(21, 22, 22);
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(25px);
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -515,7 +517,7 @@ body {
 
 .menupage-leftpart>ul {
     list-style-type: none;
-    padding: 120px 0 0 0;
+    padding: 150px 0 0 0;
     margin: 0;
 }
 
@@ -819,6 +821,7 @@ body {
     .menupage-rightpart {
         background-color: rgb(30, 29, 29);
     }
+
     body {
         background-color: rgb(30, 29, 29);
     }
