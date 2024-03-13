@@ -139,17 +139,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
-
-
 // NAVBAR COLLAPSE SYSTEM
 
-document.querySelector('.toggle-btn').addEventListener('click', function () {
-    document.querySelector('.navul').classList.toggle('active');
-    document.querySelector('.navbar-overlay').classList.toggle('active');
-});
+const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.navul');
+    const header = document.getElementById('header');
 
-document.querySelector('.navbar-close-btn').addEventListener('click', function () {
-    document.querySelector('.navul').classList.remove('active');
-    document.querySelector('.navbar-overlay').classList.remove('active');
-});
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 250) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    menuItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
