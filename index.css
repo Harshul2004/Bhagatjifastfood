@@ -89,7 +89,9 @@ body {
     height: 40px;
     width: 100%;
     font-family: 'Forum';
-    background-color: rgb(21, 22, 22);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(25px);
+    /* background-color: rgb(21, 22, 22); */
     font-weight: 100;
     border-bottom: 0.5px solid #e3c38c;
     z-index: 1000;
@@ -145,7 +147,9 @@ body {
 /* NAVBAR */
 
 .nav {
-    background-color: rgb(21, 22, 22);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(25px);
+    /* background-color: rgb(21, 22, 22); */
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -225,7 +229,9 @@ body {
 }
 
 .nav-button {
-    background-color: rgb(21, 22, 22);
+    /* background-color: rgb(21, 22, 22); */
+    background-color: rgb(189 188 188 / 10%);
+    backdrop-filter: blur(25px);
     border: 1px solid #e3c38c;
     color: #e3c38c;
     padding: 15px 32px;
@@ -245,7 +251,8 @@ body {
 }
 
 .toggle-btn {
-    background-color: rgb(21, 22, 22);
+    background-color: rgb(189 188 188 / 10%);
+    backdrop-filter: blur(25px);
     border: 1px solid #e3c38c;
     color: #e3c38c;
     padding: 10px 20px;
@@ -284,7 +291,8 @@ body {
 
 @media only screen and (max-width: 1200px) {
     .nav {
-        background-color: rgb(21, 22, 22);
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(25px);
         border-bottom: #e3c38c 1px solid;
         display: flex;
         justify-content: center;
@@ -344,7 +352,8 @@ body {
     }
 
     .nav-button {
-        background-color: rgb(21, 22, 22);
+        background-color: rgb(189 188 188 / 10%);
+        backdrop-filter: blur(25px);
         border: 1px solid #e3c38c;
         color: #e3c38c;
         width: 100px;
