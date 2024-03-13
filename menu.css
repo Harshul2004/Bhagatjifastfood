@@ -88,6 +88,15 @@ body {
     .header {
         display: none;
     }
+
+    .cart {
+        max-width: 430px;
+        width: 377px;
+    }
+
+    .cart>.cart-items>.cart-item>span {
+        font-size: 19px;
+    }
 }
 
 /* NAVBAR */
@@ -286,10 +295,15 @@ body {
 
     .cart {
         max-width: 430px;
+        width: 377px;
     }
 
     .hamburger {
         display: block;
+    }
+
+    .cart>.cart-items>.cart-item>span {
+        font-size: 19px;
     }
 }
 
@@ -425,6 +439,15 @@ body {
 
     .footer-left {
         text-align: left;
+    }
+
+    .cart {
+        max-width: 430px;
+        width: 377px;
+    }
+
+    .cart>.cart-items>.cart-item>span {
+        font-size: 19px;
     }
 }
 
@@ -798,5 +821,14 @@ body {
     }
     body {
         background-color: rgb(30, 29, 29);
+    }
+
+    .cart {
+        max-width: 430px;
+        width: 377px;
+    }
+
+    .cart>.cart-items>.cart-item>span {
+        font-size: 19px;
     }
 }
