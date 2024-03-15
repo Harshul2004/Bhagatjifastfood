@@ -81,7 +81,8 @@ document.getElementById('login-form').addEventListener('submit', function (event
     for (var i = 0; i < existingUsers.length; i++) {
         if (existingUsers[i].username === username && existingUsers[i].password === password) {
             alert("Login successful!");
-            window.location.href = 'index.html';
+            // window.location.href = 'index.html';
+            document.getElementById("login-button").style.display = "none";
             return;
         }
     }
