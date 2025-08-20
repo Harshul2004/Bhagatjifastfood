@@ -30,79 +30,130 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalElement = document.querySelector('.total');
     const searchInput = document.getElementById('searchInput');
     const searchingInput = document.getElementById('searchingInput');
+    const cartCountElement = document.createElement('span');
+
+    // Add a cart count badge to the open-cart button
+    cartCountElement.classList.add('cart-count');
+    cartCountElement.textContent = '0';
+    openCartButton.appendChild(cartCountElement);
 
     let cartItems = [];
     let total = 0;
 
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const title = button.parentElement.dataset.title;
-            const price = parseFloat(button.getAttribute('data-price'));
-
-            const existingItemIndex = cartItems.findIndex(item => item.title === title);
-            if (existingItemIndex !== -1) {
-                cartItems[existingItemIndex].quantity++;
-            } else {
-                cartItems.push({ title, price, quantity: 1 });
-            }
-            total += price;
-
-            renderCart();
+    if (!openCartButton) {
+        console.error('openCartButton not found in the DOM.');
+    } else {
+        openCartButton.addEventListener('click', function () {
+            cartElement.classList.toggle('open');
         });
-    });
+    }
 
-    openCartButton.addEventListener('click', function () {
-        cartElement.classList.toggle('open');
-    });
-
-    closeCartButton.addEventListener('click', function () {
-        cartElement.classList.remove('open');
-    });
-
-    proceedToCheckoutButton.addEventListener('click', function () {
-        storeCartItems(); // Store cart items in localStorage
-        window.location.href = 'checkout.html'; // Navigate to checkout page
-    });
-
-    searchInput.addEventListener('input', function () {
-        const searchQuery = searchInput.value.toLowerCase();
-        const products = document.querySelectorAll('.product');
-
-        products.forEach(product => {
-            const productName = product.dataset.title.toLowerCase();
-            if (productName.includes(searchQuery)) {
-                product.style.display = 'flex';
-            } else {
-                product.style.display = 'none';
-            }
+    if (!closeCartButton) {
+        console.error('closeCartButton not found in the DOM.');
+    } else {
+        closeCartButton.addEventListener('click', function () {
+            cartElement.classList.remove('open');
         });
-    });
-    searchingInput.addEventListener('input', function () {
-        const searchQuery = searchingInput.value.toLowerCase();
-        const products = document.querySelectorAll('.product');
+    }
 
-        products.forEach(product => {
-            const productName = product.dataset.title.toLowerCase();
-            if (productName.includes(searchQuery)) {
-                product.style.display = 'flex';
-            } else {
-                product.style.display = 'none';
-            }
+    if (!proceedToCheckoutButton) {
+        console.warn('proceedToCheckoutButton not found in the DOM. Skipping its functionality.');
+    } else {
+        proceedToCheckoutButton.addEventListener('click', function () {
+            storeCartItems(); // Store cart items in localStorage
+            window.location.href = 'checkout.html'; // Navigate to checkout page
         });
-    });
+    }
+
+    if (!cartElement) {
+        console.error('cartElement not found in the DOM.');
+    }
+
+    if (!cartItemsElement) {
+        console.error('cartItemsElement not found in the DOM.');
+    }
+
+    if (!totalElement) {
+        console.error('totalElement not found in the DOM.');
+    }
+
+    if (!searchInput) {
+        console.error('searchInput not found in the DOM.');
+    } else {
+        setupSearchFunctionality(searchInput);
+    }
+
+    if (!searchingInput) {
+        console.error('searchingInput not found in the DOM.');
+    } else {
+        setupSearchFunctionality(searchingInput);
+    }
+
+    if (addToCartButtons.length === 0) {
+        console.warn('No add-to-cart buttons found in the DOM.');
+    } else {
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const title = button.parentElement.dataset.title;
+                const price = parseFloat(button.getAttribute('data-price'));
+
+                const existingItemIndex = cartItems.findIndex(item => item.title === title);
+                if (existingItemIndex !== -1) {
+                    cartItems[existingItemIndex].quantity++;
+                } else {
+                    cartItems.push({ title, price, quantity: 1 });
+                }
+                total += price;
+
+                updateCartCount();
+                renderCart();
+            });
+        });
+    }
+
+    function setupSearchFunctionality(inputElement) {
+        inputElement.addEventListener('input', function () {
+            const searchQuery = inputElement.value.toLowerCase().trim();
+            const products = document.querySelectorAll('.product');
+            const categoryNames = document.querySelectorAll('.category-name');
+
+            if (searchQuery === '') {
+                // Show all products and categories when search is cleared
+                products.forEach(product => product.style.display = 'flex');
+                categoryNames.forEach(category => category.style.display = 'block');
+                return;
+            }
+
+            // Hide all category names
+            categoryNames.forEach(category => category.style.display = 'none');
+
+            // Show only matching products
+            products.forEach(product => {
+                const productName = product.dataset.title?.toLowerCase() || '';
+                product.style.display = productName.includes(searchQuery) ? 'flex' : 'none';
+            });
+        });
+    }
+
+    function updateCartCount() {
+        const itemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
+        cartCountElement.textContent = itemCount;
+    }
 
     function renderCart() {
+        if (!cartItemsElement || !totalElement) return;
+
         cartItemsElement.innerHTML = '';
         cartItems.forEach(item => {
             const li = document.createElement('li');
             li.classList.add('cart-item');
             li.innerHTML = `
-        <span>${item.title}: ₹${item.price}</span>
-        <div>
-            <input type="number" min="1" value="${item.quantity}" class="item-quantity">
-            <button class="remove-item">Remove</button>
-        </div>
-    `;
+                <span>${item.title}: ₹${item.price}</span>
+                <div>
+                    <input type="number" min="1" value="${item.quantity}" class="item-quantity">
+                    <button class="remove-item">Remove</button>
+                </div>
+            `;
             cartItemsElement.appendChild(li);
 
             const quantityInput = li.querySelector('.item-quantity');
@@ -116,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     item.quantity = newQuantity;
                 }
                 totalElement.textContent = total.toFixed(2);
+                updateCartCount();
             });
         });
 
@@ -129,11 +181,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 total -= removedItem.price * removedItem.quantity;
                 cartItems = cartItems.filter(item => item.title !== title);
                 renderCart();
+                updateCartCount();
             });
         });
     }
 
-    // Function to store cart items in localStorage
     function storeCartItems() {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }
@@ -157,11 +209,4 @@ const hamburger = document.querySelector('.hamburger');
       } else {
         header.classList.remove('scrolled');
       }
-    });
-
-    menuItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-      });
     });

@@ -38,11 +38,11 @@
             </div>
             <div class="callheader">
                 <img class="headerimgs" src="resources/icons/call_white.svg" alt="">
-                <span>+91 9855424308</span>
+                <span>+91 98145-24308</span>
             </div>
             <div class="emailheader">
                 <img class="headerimgs" src="resources/icons/email_white_24dp.svg" alt="">
-                <span onclick="window.location.href = 'https://mail.google.com/'">jangraharshul@gmail.com</span>
+                <span>Text Hi/Hello to +91 98145-24308</span>
             </div>
         </div>
 
@@ -57,16 +57,19 @@
                 <ul class="navul">
 
                     <li class="navli"><a href="index.html">HOME</a></li>
-                    <li class="navli"><a href="index.html">RANGE</a></li>
+                    <!-- <li class="navli"><a href="index.html">RANGE</a></li> -->
                     <li class="navli"><a href="#footer">ABOUT US</a></li>
-                    <li class="navli"><a href="index.html">EVENTS</a></li>
+                    <!-- <li class="navli"><a href="index.html">EVENTS</a></li> -->
                     <li class="navli"><a href="index.html">ALBUM</a></li>
                     <li class="navli"><a href="#footer">CONTACT</a></li>
                 </ul>
             </div>
             <div
                 style="width: 20%; display: flex; align-items: center; justify-content: flex-end; padding: 0 30px 0 0;">
-                <button class="nav-button open-cart">CART</button>
+                <div class="cart-container">
+                    <button class="nav-button open-cart">CART</button>
+                    <span class="cart-counter"></span>
+                </div>
                 <button class="hamburger toggle-btn">
                     <span class="bar">&#9776;</span>
                 </button>
@@ -85,270 +88,519 @@
                     <h2 style="font-family: 'Forum'; font-weight: 500;margin: 10px 0; letter-spacing: 0.1em;">CATEGORIES
                     </h2>
                 </li>
-                <li><a href="#indian">Indian</a></li>
-                <li><a href="#south-indian">South Indian</a></li>
-                <li><a href="#chinese">Chinese</a></li>
+                <li><a href="#soups">Soups</a></li>
+                <li><a href="#chopsuey">Chopsuey</a></li>
+                <li><a href="#special-snacks">Special Snacks</a></li>
+                <li><a href="#gravy-special">Gravy Special</a></li>
                 <li><a href="#burgers">Burgers</a></li>
-                <li><a href="#sandwiches">Sandwiches</a></li>
+                <li><a href="#fries">Fries</a></li>
+                <li><a href="#sandwiches-cold">Sandwiches Cold</a></li>
+                <li><a href="#sandwiches-grilled">Sandwiches Grilled</a></li>
                 <li><a href="#pizza">Pizza</a></li>
-                <li><a href="#special-snacks">Spcial Snacks</a></li>
+                <li><a href="#manpasand-dishes">Manpasand Dishes</a></li>
+                <li><a href="#south-indian">South Indian</a></li>
+                <li><a href="#noodles">Noodles</a></li>
+                <li><a href="#fried-rice">Fried Rice</a></li>
+                <li><a href="#indian-dishes">Indian Dishes</a></li>
             </ul>
         </div>
         <div class="menupage-rightpart">
-            <div class="margin-div" style="width: 100%; margin-top: 0px; height: 160px;" id="indian"></div>
+            <div class="margin-div" style="width: 100%; margin-top: 0px; height: 160px;" id="soups"></div>
             <div class="container">
                 <div>
                     <input class="search-menu-second" type="text" id="searchingInput" placeholder="Search products...">
                 </div>
+
                 <div class="category-name">
-                    <h1>INDIAN</h1>
-                </div>
-                <div class="products">
-                    <div class="product" data-title="Shahi Paneer">
-                        <div class="menu-item-flex">
-                            <h3>Shahi Paneer</h3>
-                            <p class="description">Shahi paneer is a rich and creamy North Indian dish made with paneer
-                                cooked in a luxurious gravy of cashews, cream, and aromatic spices.</p>
-                            <p class="price">₹220</p>
-                        </div>
-                        <button class="add-to-cart" data-price="220">+</button>
-                    </div>
-                    <div class="product" data-title="Kadhai Paneer">
-                        <div class="menu-item-flex">
-                            <h3>Kadhai Paneer</h3>
-                            <p class="description">Kadhai paneer is a flavorful North Indian dish featuring paneer
-                                cooked with bell peppers, onions, tomatoes, and a blend of aromatic spices in a
-                                traditional kadhai, resulting in a spicy and tangy gravy.
-                            </p>
-                            <p class="price">₹240</p>
-                        </div>
-                        <button class="add-to-cart" data-price="240">+</button>
-                    </div>
-                    <div class="product" data-title="Dal Makhni">
-                        <div class="menu-item-flex">
-                            <h3>Dal Makhni</h3>
-                            <p class="description">Dal makhni is a popular Punjabi dish made with black lentils (urad
-                                dal) and kidney beans (rajma) simmered in a creamy tomato-based gravy enriched with
-                                butter and cream.</p>
-                            <p class="price">₹150</p>
-                        </div>
-                        <button class="add-to-cart" data-price="150">+</button>
-                    </div>
-                    <div class="product" data-title="Paneer Bhurji">
-                        <div class="menu-item-flex">
-                            <h3>Paneer Bhurji</h3>
-                            <p class="description">Paneer bhurji is a North Indian dish made by scrambling paneer
-                                (Indian cottage cheese) with onions, tomatoes, and spices, creating a flavorful and
-                                protein-rich vegetarian.</p>
-                            <p class="price">₹230</p>
-                        </div>
-                        <button class="add-to-cart" data-price="230">+</button>
-                    </div>
-                    <div class="product" data-title="Mix Veg">
-                        <div class="menu-item-flex">
-                            <h3>Mix Veg</h3>
-                            <p class="description">Mix veg is a versatile Indian dish made by combining assorted
-                                vegetables such as carrots, peas, beans, cauliflower, and potatoes, cooked in a spiced
-                                gravy or masala, offering a colorful and nutritious medley of flavors and textures.</p>
-                            <p class="price">₹220</p>
-                        </div>
-                        <button class="add-to-cart" data-price="220">+</button>
-                    </div>
-                    <div class="product" data-title="Chana Masala">
-                        <div class="menu-item-flex">
-                            <h3>Chana Masala</h3>
-                            <p class="description">Chana masala is a classic Indian dish made with chickpeas (chana)
-                                cooked in a rich and flavorful gravy of tomatoes, onions, garlic, ginger, and a blend of
-                                aromatic spices such as cumin, coriander, and garam masala.</p>
-                            <p class="price">₹220</p>
-                        </div>
-                        <button class="add-to-cart" data-price="220">+</button>
-                    </div>
-                    <div class="product" data-title="Butter Naan">
-                        <div class="menu-item-flex">
-                            <h3>Butter Naan</h3>
-                            <p class="description">Butter naan is a popular Indian flatbread made from refined flour
-                                dough, typically leavened with yeast or baking powder, cooked in a tandoor (clay oven),
-                                and brushed with melted butter, resulting in a soft, fluffy texture and a rich, buttery
-                                flavor.</p>
-                            <p class="price">₹30</p>
-                        </div>
-                        <button class="add-to-cart" data-price="30">+</button>
-                    </div>
-                    <div class="product" data-title="Butter Chapatti">
-                        <div class="menu-item-flex">
-                            <h3>Butter Chapatti</h3>
-                            <p class="description">Butter chapatti is a simple yet delightful Indian flatbread made from
-                                whole wheat flour dough, cooked on a hot griddle, and brushed with melted butter,
-                                imparting a deliciously soft texture and buttery taste to each bite.</p>
-                            <p class="price">₹20</p>
-                        </div>
-                        <button class="add-to-cart" data-price="20">+</button>
-                    </div>
-                </div>
-
-                <div class="category-name" id="south-indian">
-                    <h1>SOUTH INDIAN</h1>
+                    <h1>SOUPS</h1>
                 </div>
 
                 <div class="products">
-                    <div class="product" data-title="Masala Dosa">
+                    <div class="product" data-title="Manchow Soup">
                         <div class="menu-item-flex">
-                            <h3>Masala Dosa</h3>
-                            <p class="description">Masala dosa is a popular South Indian dish consisting of a thin,
-                                crispy rice and lentil crepe filled with a spiced potato filling. The dosa is typically
-                                served with coconut chutney and sambar, offering a delightful combination of textures
-                                and flavors.</p>
-                            <p class="price">₹110</p>
-                        </div>
-                        <button class="add-to-cart" data-price="110">+</button>
-                    </div>
-                    <div class="product" data-title="Plain Dosa">
-                        <div class="menu-item-flex">
-                            <h3>Plain Dosa</h3>
-                            <p class="description">A plain dosa is a traditional South Indian crepe made from a
-                                fermented batter of rice and black lentils. It is thin, crispy, and golden brown in
-                                color, with a mild, slightly tangy flavor from the fermentation process. Typically
-                                served with coconut chutney and sambar, it's a staple breakfast or snack in South Indian
-                                cuisine.
-                            </p>
-                            <p class="price">₹80</p>
-                        </div>
-                        <button class="add-to-cart" data-price="80">+</button>
-                    </div>
-                    <div class="product" data-title="Paneer Dosa">
-                        <div class="menu-item-flex">
-                            <h3>Paneer Dosa</h3>
-                            <p class="description">Paneer dosa is a delightful variation of the traditional South Indian
-                                dosa, where crumbled paneer is used as a filling inside the dosa along with other
-                                ingredients like onions, tomatoes, and spices. It offers a fusion of flavors, combining
-                                the crispiness of dosa with the richness of paneer, making it a popular choice among
-                                dosa lovers.</p>
-                            <p class="price">₹140</p>
-                        </div>
-                        <button class="add-to-cart" data-price="140">+</button>
-                    </div>
-                    <div class="product" data-title="Rawa Masala Dosa">
-                        <div class="menu-item-flex">
-                            <h3>Rawa Masala Dosa</h3>
-                            <p class="description">Rawa masala dosa is a South Indian crepe made from semolina batter,
-                                filled with a spicy potato masala, and served with chutney and sambar, offering a crispy
-                                texture with a flavorful twist.</p>
-                            <p class="price">₹150</p>
-                        </div>
-                        <button class="add-to-cart" data-price="150">+</button>
-                    </div>
-                    <div class="product" data-title="Vada Sambar">
-                        <div class="menu-item-flex">
-                            <h3>Vada Sambar</h3>
-                            <p class="description">Vada sambar is a South Indian dish consisting of crispy, deep-fried
-                                lentil fritters (vada) served with sambar, a tangy and flavorful lentil-based vegetable
-                                stew, creating a delicious and satisfying combination of textures and flavors.</p>
-                            <p class="price">₹100</p>
-                        </div>
-                        <button class="add-to-cart" data-price="100">+</button>
-                    </div>
-                    <div class="product" data-title="Plain Utpam">
-                        <div class="menu-item-flex">
-                            <h3>Plain Utpam</h3>
-                            <p class="description">Plain utpam is a South Indian pancake made from a fermented batter of
-                                rice and lentils, cooked on a griddle, typically served with chutney and sambar,
-                                offering a soft and fluffy texture with a subtle tanginess.</p>
+                            <h3>Manchow Soup</h3>
                             <p class="price">₹90</p>
                         </div>
                         <button class="add-to-cart" data-price="90">+</button>
                     </div>
-                    <div class="product" data-title="Mysore Masala Dosa">
+                    <div class="product" data-title="Tomato Soup with Cream">
                         <div class="menu-item-flex">
-                            <h3>Mysore Masala Dosa</h3>
-                            <p class="description">Mysore masala dosa is a variation of the traditional dosa,
-                                characterized by a spicy red chutney spread inside the dosa along with a potato filling,
-                                creating a flavorful and aromatic dish often served with coconut chutney and sambar.</p>
+                            <h3>Tomato Soup with Cream</h3>
+                            <p class="price">₹90</p>
+                        </div>
+                        <button class="add-to-cart" data-price="90">+</button>
+                    </div>
+                    <div class="product" data-title="Hot & Sour Soup">
+                        <div class="menu-item-flex">
+                            <h3>Hot & Sour Soup</h3>
+                            <p class="price">₹90</p>
+                        </div>
+                        <button class="add-to-cart" data-price="90">+</button>
+                    </div>
+                    <div class="product" data-title="Talumien Vegetable Soup">
+                        <div class="menu-item-flex">
+                            <h3>Talumien Vegetable Soup</h3>
+                            <p class="price">₹90</p>
+                        </div>
+                        <button class="add-to-cart" data-price="90">+</button>
+                    </div>
+                    <div class="product" data-title="Mix Vegetable Soup">
+                        <div class="menu-item-flex">
+                            <h3>Mix Vegetable Soup</h3>
+                            <p class="price">₹90</p>
+                        </div>
+                        <button class="add-to-cart" data-price="90">+</button>
+                    </div>
+                    <div class="product" data-title="Sweet Corn Soup">
+                        <div class="menu-item-flex">
+                            <h3>Sweet Corn Soup</h3>
+                            <p class="price">₹100</p>
+                        </div>
+                        <button class="add-to-cart" data-price="100">+</button>
+                    </div>
+                    <div class="product" data-title="Noodle Soup">
+                        <div class="menu-item-flex">
+                            <h3>Noodle Soup</h3>
+                            <p class="price">₹90</p>
+                        </div>
+                        <button class="add-to-cart" data-price="90">+</button>
+                    </div>
+                    <div class="product" data-title="Mushroom Soup">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Soup</h3>
+                            <p class="price">₹100</p>
+                        </div>
+                        <button class="add-to-cart" data-price="100">+</button>
+                    </div>
+                    <div class="product" data-title="Clear Soup">
+                        <div class="menu-item-flex">
+                            <h3>Clear Soup</h3>
+                            <p class="price">₹90</p>
+                        </div>
+                        <button class="add-to-cart" data-price="90">+</button>
+                    </div>
+                    <div class="product" data-title="Tomato Soup">
+                        <div class="menu-item-flex">
+                            <h3>Tomato Soup</h3>
+                            <p class="price">₹100</p>
+                        </div>
+                        <button class="add-to-cart" data-price="100">+</button>
+                    </div>
+                    <div class="product" data-title="Almond Soup">
+                        <div class="menu-item-flex">
+                            <h3>Almond Soup</h3>
+                            <p class="price">₹150</p>
+                        </div>
+                        <button class="add-to-cart" data-price="150">+</button>
+                    </div>
+                    <div class="product" data-title="Cashew Nut Soup">
+                        <div class="menu-item-flex">
+                            <h3>Cashew Nut Soup</h3>
                             <p class="price">₹150</p>
                         </div>
                         <button class="add-to-cart" data-price="150">+</button>
                     </div>
                 </div>
 
-                <div class="category-name" id="chinese">
-                    <h1>CHINESE</h1>
+                <div class="category-name" id="chopsuey">
+                    <h1>CHOPSUEY</h1>
                 </div>
 
                 <div class="products">
-                    <div class="product" data-title="Hakka Noodles">
+                    <div class="product" data-title="Vegetable Chopsuey">
                         <div class="menu-item-flex">
-                            <h3>Hakka Noodles</h3>
-                            <p class="description">Hakka noodles is a popular Indo-Chinese dish made from stir-fried
-                                noodles cooked with assorted vegetables, meats, or seafood, seasoned with soy sauce,
-                                garlic, ginger, and other spices, resulting in a flavorful and satisfying noodle dish
-                                with a hint of Asian flair.</p>
-                            <p class="price">₹170</p>
-                        </div>
-                        <button class="add-to-cart" data-price="170">+</button>
-                    </div>
-                    <div class="product" data-title="Veg Chowmein">
-                        <div class="menu-item-flex">
-                            <h3>Veg Chowmein</h3>
-                            <p class="description">Veg chowmein is a popular Indo-Chinese dish made with stir-fried
-                                noodles mixed with assorted vegetables such as cabbage, carrots, bell peppers, and
-                                onions, seasoned with soy sauce and other spices, offering a savory and flavorful
-                                vegetarian noodle dish.
-                            </p>
-                            <p class="price">₹135</p>
-                        </div>
-                        <button class="add-to-cart" data-price="135">+</button>
-                    </div>
-                    <div class="product" data-title="Chilly Garlic Chowmein">
-                        <div class="menu-item-flex">
-                            <h3>Chilly Garlic Chowmein</h3>
-                            <p class="description">Chilly garlic chowmein is a flavorful Indo-Chinese dish featuring
-                                stir-fried noodles seasoned with garlic, chili flakes, and soy sauce, offering a spicy
-                                and aromatic twist to the classic chowmein, often accompanied by assorted vegetables or
-                                proteins for added texture and flavor.</p>
-                            <p class="price">₹160</p>
-                        </div>
-                        <button class="add-to-cart" data-price="160">+</button>
-                    </div>
-                    <div class="product" data-title="Gravy Noodles">
-                        <div class="menu-item-flex">
-                            <h3>Gravy Noodles</h3>
-                            <p class="description">Gravy noodles is a Chinese-inspired dish consisting of noodles cooked
-                                in a flavorful and savory gravy made from ingredients such as soy sauce, oyster sauce,
-                                garlic, ginger, and various spices, typically accompanied by vegetables, meats, or
-                                seafood, creating a delicious and comforting noodle dish.</p>
-                            <p class="price">₹170</p>
-                        </div>
-                        <button class="add-to-cart" data-price="170">+</button>
-                    </div>
-                    <div class="product" data-title="Special Noodles">
-                        <div class="menu-item-flex">
-                            <h3>Special Noodles</h3>
-                            <p class="description">A delectable combination of stir-fried noodles with an assortment of
-                                fresh vegetables, meats, or seafood, seasoned with a unique blend of spices and sauces,
-                                resulting in a delightful and customized culinary creation.</p>
-                            <p class="price">₹240</p>
-                        </div>
-                        <button class="add-to-cart" data-price="240">+</button>
-                    </div>
-                    <div class="product" data-title="Crispy Noodles">
-                        <div class="menu-item-flex">
-                            <h3>Crispy Noodles</h3>
-                            <p class="description">Deep-fried thin noodles cooked until golden and crunchy, typically
-                                served as a base for stir-fries or toppings with savory sauces and vegetables, offering
-                                a delightful contrast of textures.</p>
+                            <h3>Vegetable Chopsuey</h3>
                             <p class="price">₹180</p>
                         </div>
                         <button class="add-to-cart" data-price="180">+</button>
                     </div>
-                    <div class="product" data-title="Cheese Noodles">
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Chinese Chopsuey">
                         <div class="menu-item-flex">
-                            <h3>Cheese Noodles</h3>
-                            <p class="description">A delectable fusion dish featuring cooked noodles tossed in a creamy
-                                cheese sauce, offering a rich and indulgent flavor profile, often garnished with herbs
-                                or additional cheese for added decadence.</p>
+                            <h3>Chinese Chopsuey</h3>
+                            <p class="price">₹200</p>
+                        </div>
+                        <button class="add-to-cart" data-price="200">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Triple Chopsuey">
+                        <div class="menu-item-flex">
+                            <h3>Triple Chopsuey</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Four in One Chopsuey">
+                        <div class="menu-item-flex">
+                            <h3>Four in One Chopsuey</h3>
+                            <p class="price">₹230</p>
+                        </div>
+                        <button class="add-to-cart" data-price="230">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Chopsuey">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Chopsuey</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="category-name" id="special-snacks">
+                    <h1>SPECIAL SNACKS</h1>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Singapuri">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Singapuri</h3>
+                            <p class="price">₹250</p>
+                        </div>
+                        <button class="add-to-cart" data-price="250">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Special Cheese Chilly">
+                        <div class="menu-item-flex">
+                            <h3>Special Cheese Chilly</h3>
+                            <p class="price">₹240</p>
+                        </div>
+                        <button class="add-to-cart" data-price="240">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Chilly">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Chilly</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Chilly With Gravy">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Chilly With Gravy</h3>
+                            <p class="price">₹240</p>
+                        </div>
+                        <button class="add-to-cart" data-price="240">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Gobhi Chilly">
+                        <div class="menu-item-flex">
+                            <h3>Gobhi Chilly</h3>
                             <p class="price">₹210</p>
                         </div>
                         <button class="add-to-cart" data-price="210">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Mushroom Chilly">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Chilly</h3>
+                            <p class="price">₹210</p>
+                        </div>
+                        <button class="add-to-cart" data-price="210">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Mushroom Chilly with Gravy">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Chilly with Gravy</h3>
+                            <p class="price">₹250</p>
+                        </div>
+                        <button class="add-to-cart" data-price="250">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Finger">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Finger</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Pakora">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Pakora</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Veg. Pakora">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Pakora</h3>
+                            <p class="price">₹130</p>
+                        </div>
+                        <button class="add-to-cart" data-price="130">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Vegetable Manchurians">
+                        <div class="menu-item-flex">
+                            <h3>Vegetable Manchurians</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Veg. Manchurians with Gravy">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Manchurians with Gravy</h3>
+                            <p class="price">₹170</p>
+                        </div>
+                        <button class="add-to-cart" data-price="170">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Mushroom Manchurians">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Manchurians</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Mushroom Manch W. Gravy">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Manch W. Gravy</h3>
+                            <p class="price">₹240</p>
+                        </div>
+                        <button class="add-to-cart" data-price="240">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Manchurians">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Manchurians</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Manch. With Gravy">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Manch. With Gravy</h3>
+                            <p class="price">₹240</p>
+                        </div>
+                        <button class="add-to-cart" data-price="240">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Chilly Boll">
+                        <div class="menu-item-flex">
+                            <h3>Chilly Boll</h3>
+                            <p class="price">₹180</p>
+                        </div>
+                        <button class="add-to-cart" data-price="180">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Vegetable Spring Roll">
+                        <div class="menu-item-flex">
+                            <h3>Vegetable Spring Roll</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Spring Roll">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Spring Roll</h3>
+                            <p class="price">₹155</p>
+                        </div>
+                        <button class="add-to-cart" data-price="155">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Vegetable Bullets">
+                        <div class="menu-item-flex">
+                            <h3>Vegetable Bullets</h3>
+                            <p class="price">₹155</p>
+                        </div>
+                        <button class="add-to-cart" data-price="155">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Vegetable Cutlets">
+                        <div class="menu-item-flex">
+                            <h3>Vegetable Cutlets</h3>
+                            <p class="price">₹155</p>
+                        </div>
+                        <button class="add-to-cart" data-price="155">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Cutlets">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Cutlets</h3>
+                            <p class="price">₹210</p>
+                        </div>
+                        <button class="add-to-cart" data-price="210">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Mushroom Tikka">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Tikka</h3>
+                            <p class="price">₹300</p>
+                        </div>
+                        <button class="add-to-cart" data-price="300">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Seekh Tikka">
+                        <div class="menu-item-flex">
+                            <h3>Seekh Tikka</h3>
+                            <p class="price">₹300</p>
+                        </div>
+                        <button class="add-to-cart" data-price="300">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Salad">
+                        <div class="menu-item-flex">
+                            <h3>Salad</h3>
+                            <p class="price">₹75</p>
+                        </div>
+                        <button class="add-to-cart" data-price="75">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Paneer Haryali Tikka">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Haryali Tikka</h3>
+                            <p class="price">₹320</p>
+                        </div>
+                        <button class="add-to-cart" data-price="320">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Paneer Malai Tikka">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Malai Tikka</h3>
+                            <p class="price">₹320</p>
+                        </div>
+                        <button class="add-to-cart" data-price="320">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Paneer Tikka Abdi">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Tikka Abdi</h3>
+                            <p class="price">₹320</p>
+                        </div>
+                        <button class="add-to-cart" data-price="320">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Achari Paneer Tikka">
+                        <div class="menu-item-flex">
+                            <h3>Achari Paneer Tikka</h3>
+                            <p class="price">₹320</p>
+                        </div>
+                        <button class="add-to-cart" data-price="320">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Mushroom Tikka">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Tikka</h3>
+                            <p class="price">₹320</p>
+                        </div>
+                        <button class="add-to-cart" data-price="320">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Mushroom Tikka Achari">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Tikka Achari</h3>
+                            <p class="price">₹320</p>
+                        </div>
+                        <button class="add-to-cart" data-price="320">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Veg Cocktail Kabab">
+                        <div class="menu-item-flex">
+                            <h3>Veg Cocktail Kabab</h3>
+                            <p class="price">₹200</p>
+                        </div>
+                        <button class="add-to-cart" data-price="200">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Hara Bhara Kabab">
+                        <div class="menu-item-flex">
+                            <h3>Hara Bhara Kabab</h3>
+                            <p class="price">₹200</p>
+                        </div>
+                        <button class="add-to-cart" data-price="200">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Veg. Crispy">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Crispy</h3>
+                            <p class="price">₹210</p>
+                        </div>
+                        <button class="add-to-cart" data-price="210">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cashew Nut Kabab">
+                        <div class="menu-item-flex">
+                            <h3>Cashew Nut Kabab</h3>
+                            <p class="price">₹230</p>
+                        </div>
+                        <button class="add-to-cart" data-price="230">+</button>
+                    </div>
+                </div>
+
+                <div class="category-name" id="gravy-special">
+                    <h1>GRAVY SPECIAL</h1>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Sweet and Sour Sauce">
+                        <div class="menu-item-flex">
+                            <h3>Sweet and Sour Sauce</h3>
+                            <p class="price">₹180</p>
+                        </div>
+                        <button class="add-to-cart" data-price="180">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Mix Vegetable in White Sauce">
+                        <div class="menu-item-flex">
+                            <h3>Mix Vegetable in White Sauce</h3>
+                            <p class="price">₹200</p>
+                        </div>
+                        <button class="add-to-cart" data-price="200">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Lemon Paneer with Butter">
+                        <div class="menu-item-flex">
+                            <h3>Lemon Paneer with Butter</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
                     </div>
                 </div>
 
@@ -357,148 +609,208 @@
                 </div>
 
                 <div class="products">
-                    <div class="product" data-title="Veg Burger">
-                        <div class="menu-item-flex">
-                            <h3>Veg Burger</h3>
-                            <p class="description">A delicious sandwich consisting of a savory vegetable patty, fresh
-                                lettuce, tomatoes, onions, and condiments, sandwiched between soft burger buns, offering
-                                a satisfying and flavorful vegetarian option.</p>
-                            <p class="price">₹70</p>
-                        </div>
-                        <button class="add-to-cart" data-price="70">+</button>
-                    </div>
                     <div class="product" data-title="Paneer Burger">
                         <div class="menu-item-flex">
                             <h3>Paneer Burger</h3>
-                            <p class="description">A scrumptious sandwich featuring a flavorful paneer (Indian cottage
-                                cheese) patty seasoned with spices, paired with fresh lettuce, tomatoes, onions, and
-                                condiments, nestled between soft burger buns, offering a delightful twist with a hint of
-                                Indian flair.
-                            </p>
                             <p class="price">₹90</p>
                         </div>
                         <button class="add-to-cart" data-price="90">+</button>
                     </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Veg. Burger">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Burger</h3>
+                            <p class="price">₹70</p>
+                        </div>
+                        <button class="add-to-cart" data-price="70">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Cheese Burger">
                         <div class="menu-item-flex">
                             <h3>Cheese Burger</h3>
-                            <p class="description">A classic American favorite featuring a juicy beef patty topped with
-                                melted cheese, lettuce, tomatoes, onions, and condiments, sandwiched between soft burger
-                                buns, offering a satisfying and indulgent culinary experience.</p>
                             <p class="price">₹100</p>
                         </div>
                         <button class="add-to-cart" data-price="100">+</button>
                     </div>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Mushroom Burger">
                         <div class="menu-item-flex">
                             <h3>Mushroom Burger</h3>
-                            <p class="description">A delicious vegetarian option featuring a hearty portobello mushroom
-                                cap marinated and grilled to perfection, nestled between soft burger buns, offering a
-                                savory and satisfying alternative to traditional burgers.</p>
                             <p class="price">₹100</p>
                         </div>
                         <button class="add-to-cart" data-price="100">+</button>
                     </div>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Maha Burger">
                         <div class="menu-item-flex">
                             <h3>Maha Burger</h3>
-                            <p class="description">A colossal delight featuring multiple layers of juicy beef patties,
-                                melted cheese, crispy bacon, fresh lettuce, tomatoes, onions, and a medley of
-                                condiments, all stacked between toasted buns, offering an indulgent and satisfying feast
-                                for burger enthusiasts.</p>
                             <p class="price">₹145</p>
                         </div>
                         <button class="add-to-cart" data-price="145">+</button>
                     </div>
-                    <div class="product" data-title="Special Burger">
-                        <div class="menu-item-flex">
-                            <h3>Special Burger</h3>
-                            <p class="description">An exquisite vegetarian masterpiece featuring a handmade vegetable
-                                patty infused with gourmet ingredients and specialty sauces, all nestled between
-                                artisanal whole grain buns, offering a culinary delight for discerning palates.</p>
-                            <p class="price">₹180</p>
-                        </div>
-                        <button class="add-to-cart" data-price="180">+</button>
-                    </div>
                 </div>
 
-                <div class="category-name" id="sandwiches">
-                    <h1>SANDWICHES</h1>
+                <div class="category-name" id="fries">
+                    <h1>FRIES</h1>
                 </div>
 
                 <div class="products">
-                    <div class="product" data-title="Veg Sandwich">
+                    <div class="product" data-title="French Fries">
                         <div class="menu-item-flex">
-                            <h3>Veg Sandwich</h3>
-                            <p class="description">A delectable combination of fresh vegetables, cheese, and condiments,
-                                nestled between slices of soft bread for a satisfying and flavorful meal on-the-go.</p>
+                            <h3>French Fries</h3>
+                            <p class="price">₹120</p>
+                        </div>
+                        <button class="add-to-cart" data-price="120">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Smiles (Crispy Happy Potatoes)">
+                        <div class="menu-item-flex">
+                            <h3>Smiles (Crispy Happy Potatoes)</h3>
+                            <p class="price">₹120</p>
+                        </div>
+                        <button class="add-to-cart" data-price="120">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Super Wedges">
+                        <div class="menu-item-flex">
+                            <h3>Super Wedges</h3>
+                            <p class="price">₹120</p>
+                        </div>
+                        <button class="add-to-cart" data-price="120">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Vege Nuggets">
+                        <div class="menu-item-flex">
+                            <h3>Vege Nuggets</h3>
+                            <p class="price">₹120</p>
+                        </div>
+                        <button class="add-to-cart" data-price="120">+</button>
+                    </div>
+                </div>
+
+                <div class="category-name" id="sandwiches-cold">
+                    <h1>SANDWICHES COLD</h1>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Vegetable Sandwich">
+                        <div class="menu-item-flex">
+                            <h3>Vegetable Sandwich</h3>
                             <p class="price">₹75</p>
                         </div>
                         <button class="add-to-cart" data-price="75">+</button>
                     </div>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Cheese Sandwich">
                         <div class="menu-item-flex">
                             <h3>Cheese Sandwich</h3>
-                            <p class="description">A simple yet satisfying treat featuring gooey melted cheese
-                                sandwiched between slices of toasted bread, offering a comforting and indulgent snack
-                                for cheese lovers.
-                            </p>
                             <p class="price">₹110</p>
                         </div>
                         <button class="add-to-cart" data-price="110">+</button>
                     </div>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Club Sandwich">
                         <div class="menu-item-flex">
                             <h3>Club Sandwich</h3>
-                            <p class="description">A vegetarian twist on the classic club sandwich, featuring layers of
-                                toasted bread stacked with fresh vegetables such as lettuce, tomatoes, cucumbers, and
-                                avocado, along with cheese and mayonnaise, providing a flavorful and satisfying meal
-                                option for veggie enthusiasts.</p>
-                            <p class="price">₹120</p>
+                            <p class="price">₹110</p>
                         </div>
-                        <button class="add-to-cart" data-price="120">+</button>
+                        <button class="add-to-cart" data-price="110">+</button>
                     </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Butter Slice">
+                        <div class="menu-item-flex">
+                            <h3>Butter Slice</h3>
+                            <p class="price">₹70</p>
+                        </div>
+                        <button class="add-to-cart" data-price="70">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Tomato Sandwich">
                         <div class="menu-item-flex">
                             <h3>Tomato Sandwich</h3>
-                            <p class="description">A simple yet flavorful snack consisting of ripe tomato slices
-                                sandwiched between slices of soft bread, often enhanced with a spread such as mayonnaise
-                                or pesto, offering a refreshing and light option perfect for a quick bite.</p>
                             <p class="price">₹75</p>
                         </div>
                         <button class="add-to-cart" data-price="75">+</button>
                     </div>
+                </div>
+
+
+                <div class="category-name" id="sandwiches-grilled">
+                    <h1>SANDWICHES GRILLED</h1>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Cheese Toast">
                         <div class="menu-item-flex">
                             <h3>Cheese Toast</h3>
-                            <p class="description">A deliciously comforting snack or appetizer made by spreading melted
-                                cheese on slices of bread and toasting until golden and bubbly, creating a warm and
-                                gooey treat enjoyed by cheese enthusiasts.</p>
                             <p class="price">₹120</p>
                         </div>
                         <button class="add-to-cart" data-price="120">+</button>
                     </div>
-                    <div class="product" data-title="Veg Grilled Sandwich">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Vegetable Grilled Sandwich">
                         <div class="menu-item-flex">
-                            <h3>Veg Grilled Sandwich</h3>
-                            <p class="description">A flavorful delight featuring a medley of grilled vegetables such as
-                                bell peppers, zucchini, and onions, layered between slices of bread and toasted to
-                                perfection, offering a satisfying and wholesome meal option for vegetarians.</p>
+                            <h3>Vegetable Grilled Sandwich</h3>
                             <p class="price">₹145</p>
                         </div>
                         <button class="add-to-cart" data-price="145">+</button>
                     </div>
-                    <div class="product" data-title="Onion Garlic Sandwich">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Onion Garlic Grilled Sandwich">
                         <div class="menu-item-flex">
-                            <h3>Onion Garlic Sandwich</h3>
-                            <p class="description">A savory treat featuring slices of caramelized onions and roasted
-                                garlic cloves layered between slices of bread, offering a rich and aromatic flavor
-                                profile perfect for garlic lovers.</p>
-                            <p class="price">₹150</p>
+                            <h3>Onion Garlic Grilled Sandwich</h3>
+                            <p class="price">₹145</p>
                         </div>
-                        <button class="add-to-cart" data-price="150">+</button>
+                        <button class="add-to-cart" data-price="145">+</button>
                     </div>
                 </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Tomato Grilled Sandwich">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Tomato Grilled Sandwich</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Special Grilled Sandwich">
+                        <div class="menu-item-flex">
+                            <h3>Special Grilled Sandwich</h3>
+                            <p class="price">₹170</p>
+                        </div>
+                        <button class="add-to-cart" data-price="170">+</button>
+                    </div>
+                </div>
+
 
                 <div class="category-name" id="pizza">
                     <h1>PIZZA</h1>
@@ -508,161 +820,1199 @@
                     <div class="product" data-title="Sweet Corn Pizza">
                         <div class="menu-item-flex">
                             <h3>Sweet Corn Pizza</h3>
-                            <p class="description">A delightful twist on the classic pizza topped with sweet corn
-                                kernels along with other traditional toppings such as tomato sauce, cheese, and assorted
-                                vegetables or meats, offering a unique combination of savory and sweet flavors.</p>
                             <p class="price">₹240</p>
                         </div>
                         <button class="add-to-cart" data-price="240">+</button>
                     </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Paneer Pizza">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Paneer Pizza</h3>
+                            <p class="price">₹200</p>
+                        </div>
+                        <button class="add-to-cart" data-price="200">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Cheese Pizza">
                         <div class="menu-item-flex">
                             <h3>Cheese Pizza</h3>
-                            <p class="description">A timeless classic featuring a thin or thick crust topped with rich
-                                tomato sauce and generous layers of melted mozzarella cheese, offering a simple yet
-                                satisfying taste of Italy's most beloved comfort food.
-                            </p>
                             <p class="price">₹200</p>
                         </div>
                         <button class="add-to-cart" data-price="200">+</button>
                     </div>
-                    <div class="product" data-title="Paneer Pizza">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Onion Capsicums Mushroom Pizza">
                         <div class="menu-item-flex">
-                            <h3>Paneer Pizza</h3>
-                            <p class="description">A fusion delight featuring a traditional pizza base topped with
-                                chunks of paneer (Indian cottage cheese), along with flavorful tomato sauce, onions,
-                                bell peppers, and spices, offering a delicious blend of Italian and Indian cuisines.</p>
-                            <p class="price">₹200</p>
-                        </div>
-                        <button class="add-to-cart" data-price="200">+</button>
-                    </div>
-                    <div class="product" data-title="Veg Pizza">
-                        <div class="menu-item-flex">
-                            <h3>Veg Pizza</h3>
-                            <p class="description">A flavorful creation adorned with a variety of fresh vegetables such
-                                as bell peppers, onions, mushrooms, olives, and tomatoes, generously sprinkled with
-                                cheese atop a tomato sauce base, providing a satisfying and colorful vegetarian option.
-                            </p>
+                            <h3>Cheese Onion Capsicums Mushroom Pizza</h3>
                             <p class="price">₹240</p>
                         </div>
                         <button class="add-to-cart" data-price="240">+</button>
                     </div>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Onion Capsicum Pizza">
                         <div class="menu-item-flex">
                             <h3>Onion Capsicum Pizza</h3>
-                            <p class="description">A delectable pizza topped with savory onions, crunchy capsicum (bell
-                                peppers), tangy tomato sauce, and melted cheese, offering a flavorful combination of
-                                textures and flavors perfect for vegetable enthusiasts.</p>
                             <p class="price">₹200</p>
                         </div>
                         <button class="add-to-cart" data-price="200">+</button>
                     </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Tomato Pizza">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Tomato Pizza</h3>
+                            <p class="price">₹200</p>
+                        </div>
+                        <button class="add-to-cart" data-price="200">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
                     <div class="product" data-title="Mushroom Pizza">
                         <div class="menu-item-flex">
                             <h3>Mushroom Pizza</h3>
-                            <p class="description">A delectable delight featuring a classic pizza base topped with
-                                savory slices of mushrooms, tangy tomato sauce, melted cheese, and often complemented
-                                with additional toppings like onions, garlic, or herbs, offering a flavorful and
-                                satisfying option for mushroom lovers.</p>
                             <p class="price">₹200</p>
                         </div>
                         <button class="add-to-cart" data-price="200">+</button>
                     </div>
-                    <div class="product" data-title="Special Pizza">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Bhagat Ji Special Pizza">
                         <div class="menu-item-flex">
-                            <h3>Special Pizza</h3>
-                            <p class="description">A gourmet creation featuring a variety of premium vegetarian toppings
-                                such as sun-dried tomatoes, artichoke hearts, roasted red peppers, spinach, layered atop
-                                a classic pizza base with tangy tomato sauce and mozzarella cheese, offering a luxurious
-                                and indulgent culinary experience for veggie enthusiasts.</p>
+                            <h3>Bhagat Ji Special Pizza</h3>
                             <p class="price">₹250</p>
                         </div>
                         <button class="add-to-cart" data-price="250">+</button>
                     </div>
                 </div>
 
-                <div class="category-name" id="special-snacks">
-                    <h1>SPECIAL SNACKS</h1>
+
+                <div class="category-name" id="manpasand-dishes">
+                    <h1>MANPASAND DISHES</h1>
                 </div>
 
                 <div class="products">
-                    <div class="product" data-title="Cheese Chilly">
+                    <div class="product" data-title="Bombay Pao Bhaji">
                         <div class="menu-item-flex">
-                            <h3>Cheese Chilly</h3>
-                            <p class="description">A tantalizing appetizer featuring cheese cubes tossed in a spicy and
-                                tangy sauce along with bell peppers, onions, and green chilies, offering a flavorful
-                                combination of heat and creaminess.</p>
-                            <p class="price">₹220</p>
+                            <h3>Bombay Pao Bhaji</h3>
+                            <p class="price">₹100</p>
                         </div>
-                        <button class="add-to-cart" data-price="220">+</button>
+                        <button class="add-to-cart" data-price="100">+</button>
                     </div>
-                    <div class="product" data-title="Veg Manchurians">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Extra Pao">
                         <div class="menu-item-flex">
-                            <h3>Veg Manchurians</h3>
-                            <p class="description">Flavorful vegetable balls made from shredded vegetables, fried until
-                                crispy, and served in a tangy and spicy Manchurian sauce, offering a delicious
-                                Indo-Chinese fusion dish popular across India.
-                            </p>
-                            <p class="price">₹150</p>
+                            <h3>Extra Pao</h3>
+                            <p class="price">₹20</p>
                         </div>
-                        <button class="add-to-cart" data-price="150">+</button>
+                        <button class="add-to-cart" data-price="20">+</button>
                     </div>
-                    <div class="product" data-title="Veg Spring Roll">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Extra Bhaji">
                         <div class="menu-item-flex">
-                            <h3>Veg Spring Roll</h3>
-                            <p class="description">Crispy and flavorful appetizers filled with a mix of finely chopped
-                                vegetables like cabbage, carrots, and bell peppers, seasoned with spices, rolled in thin
-                                pastry wrappers, and fried until golden brown, offering a delightful snack perfect for
-                                any occasion.</p>
+                            <h3>Extra Bhaji</h3>
+                            <p class="price">₹50</p>
+                        </div>
+                        <button class="add-to-cart" data-price="50">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Channa Puri (2 Puri Per Plate)">
+                        <div class="menu-item-flex">
+                            <h3>Channa Puri (2 Puri Per Plate)</h3>
+                            <p class="price">₹80</p>
+                        </div>
+                        <button class="add-to-cart" data-price="80">+</button>
+                    </div>
+                </div>
+
+
+                <div class="category-name" id="south-indian">
+                    <h1>SOUTH INDIAN</h1>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Bhagat Ji Spl. Paneer Dosa">
+                        <div class="menu-item-flex">
+                            <h3>Bhagat Ji Spl. Paneer Dosa</h3>
+                            <p class="price">₹180</p>
+                        </div>
+                        <button class="add-to-cart" data-price="180">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Paneer Dosa">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Dosa</h3>
                             <p class="price">₹145</p>
                         </div>
                         <button class="add-to-cart" data-price="145">+</button>
                     </div>
-                    <div class="product" data-title="Paneer Tikka">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Plain Dosa">
                         <div class="menu-item-flex">
-                            <h3>Paneer Tikka</h3>
-                            <p class="description">A mouthwatering Indian appetizer consisting of marinated cubes of
-                                paneer (Indian cottage cheese) skewered with vegetables, grilled or roasted until
-                                charred and aromatic, offering a smoky and flavorful dish typically served with mint
-                                chutney and lemon wedges.</p>
-                            <p class="price">₹320</p>
+                            <h3>Plain Dosa</h3>
+                            <p class="price">₹80</p>
                         </div>
-                        <button class="add-to-cart" data-price="320">+</button>
+                        <button class="add-to-cart" data-price="80">+</button>
                     </div>
-                    <div class="product" data-title="Veg Cutlets">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Paper Plain Dosa">
                         <div class="menu-item-flex">
-                            <h3>Veg Cutlets</h3>
-                            <p class="description">Crispy and savory patties made from mashed vegetables such as
-                                potatoes, carrots, peas, and beans, mixed with spices, coated with breadcrumbs, and
-                                shallow-fried until golden brown, offering a delicious and satisfying snack or
-                                appetizer.</p>
-                            <p class="price">₹155</p>
+                            <h3>Paper Plain Dosa</h3>
+                            <p class="price">₹85</p>
                         </div>
-                        <button class="add-to-cart" data-price="155">+</button>
+                        <button class="add-to-cart" data-price="85">+</button>
                     </div>
-                    <div class="product" data-title="Veg Bullets">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Masala Dosa">
                         <div class="menu-item-flex">
-                            <h3>Veg Bullets</h3>
-                            <p class="description">Flavorful and bite-sized snacks made from a mixture of mashed
-                                vegetables, spices, and herbs, shaped into cylindrical or bullet-like forms, coated with
-                                breadcrumbs, and deep-fried until crispy and golden brown, offering a delightful and
-                                savory treat.</p>
-                            <p class="price">₹155</p>
+                            <h3>Masala Dosa</h3>
+                            <p class="price">₹110</p>
                         </div>
-                        <button class="add-to-cart" data-price="155">+</button>
+                        <button class="add-to-cart" data-price="110">+</button>
                     </div>
-                    <div class="product" data-title="Veg Crispy">
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Butter Masala Dosa">
                         <div class="menu-item-flex">
-                            <h3>Veg Crispy</h3>
-                            <p class="description">Crispy and flavorful appetizers made from assorted vegetables coated
-                                in a seasoned batter, deep-fried until golden and crunchy, offering a delicious and
-                                satisfying snack perfect for any occasion.</p>
+                            <h3>Butter Masala Dosa</h3>
+                            <p class="price">₹115</p>
+                        </div>
+                        <button class="add-to-cart" data-price="115">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Onion Dosa">
+                        <div class="menu-item-flex">
+                            <h3>Onion Dosa</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Butter Plain Dosa">
+                        <div class="menu-item-flex">
+                            <h3>Butter Plain Dosa</h3>
+                            <p class="price">₹85</p>
+                        </div>
+                        <button class="add-to-cart" data-price="85">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mysore Masala Dosa">
+                        <div class="menu-item-flex">
+                            <h3>Mysore Masala Dosa</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mysore Plain Dosa">
+                        <div class="menu-item-flex">
+                            <h3>Mysore Plain Dosa</h3>
+                            <p class="price">₹100</p>
+                        </div>
+                        <button class="add-to-cart" data-price="100">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Family Dosa">
+                        <div class="menu-item-flex">
+                            <h3>Family Dosa</h3>
+                            <p class="price">₹230</p>
+                        </div>
+                        <button class="add-to-cart" data-price="230">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Rawa Plain Dosa">
+                        <div class="menu-item-flex">
+                            <h3>Rawa Plain Dosa</h3>
+                            <p class="price">₹90</p>
+                        </div>
+                        <button class="add-to-cart" data-price="90">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Rawa Masala Dosa">
+                        <div class="menu-item-flex">
+                            <h3>Rawa Masala Dosa</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Onion Uptam">
+                        <div class="menu-item-flex">
+                            <h3>Onion Uptam</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mix Vegetable Uptam">
+                        <div class="menu-item-flex">
+                            <h3>Mix Vegetable Uptam</h3>
+                            <p class="price">₹115</p>
+                        </div>
+                        <button class="add-to-cart" data-price="115">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Bhagat Ji Special Kaju Uptam">
+                        <div class="menu-item-flex">
+                            <h3>Bhagat Ji Special Kaju Uptam</h3>
+                            <p class="price">₹180</p>
+                        </div>
+                        <button class="add-to-cart" data-price="180">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Uptam">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Uptam</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mushroom Uptam">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Uptam</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Masala Uptam">
+                        <div class="menu-item-flex">
+                            <h3>Masala Uptam</h3>
+                            <p class="price">₹120</p>
+                        </div>
+                        <button class="add-to-cart" data-price="120">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Plain Uptam">
+                        <div class="menu-item-flex">
+                            <h3>Plain Uptam</h3>
+                            <p class="price">₹85</p>
+                        </div>
+                        <button class="add-to-cart" data-price="85">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Vada Samber">
+                        <div class="menu-item-flex">
+                            <h3>Vada Samber</h3>
+                            <p class="price">₹100</p>
+                        </div>
+                        <button class="add-to-cart" data-price="100">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Extra Samber">
+                        <div class="menu-item-flex">
+                            <h3>Extra Samber</h3>
+                            <p class="price">₹25</p>
+                        </div>
+                        <button class="add-to-cart" data-price="25">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Dehi Vada">
+                        <div class="menu-item-flex">
+                            <h3>Dehi Vada</h3>
+                            <p class="price">₹85</p>
+                        </div>
+                        <button class="add-to-cart" data-price="85">+</button>
+                    </div>
+                </div>
+
+                <div class="category-name" id="noodles">
+                    <h1>NOODLES</h1>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Vegetable Hakka Noodles">
+                        <div class="menu-item-flex">
+                            <h3>Vegetable Hakka Noodles</h3>
+                            <p class="price">₹170</p>
+                        </div>
+                        <button class="add-to-cart" data-price="170">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Vegetable Chowmein">
+                        <div class="menu-item-flex">
+                            <h3>Vegetable Chowmein</h3>
+                            <p class="price">₹135</p>
+                        </div>
+                        <button class="add-to-cart" data-price="135">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Chilly Garlic Chowmein">
+                        <div class="menu-item-flex">
+                            <h3>Chilly Garlic Chowmein</h3>
+                            <p class="price">₹160</p>
+                        </div>
+                        <button class="add-to-cart" data-price="160">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Gravy Noodles">
+                        <div class="menu-item-flex">
+                            <h3>Gravy Noodles</h3>
+                            <p class="price">₹170</p>
+                        </div>
+                        <button class="add-to-cart" data-price="170">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Special Gravy Noodles">
+                        <div class="menu-item-flex">
+                            <h3>Special Gravy Noodles</h3>
+                            <p class="price">₹195</p>
+                        </div>
+                        <button class="add-to-cart" data-price="195">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Bhagat Ji Special Noodles">
+                        <div class="menu-item-flex">
+                            <h3>Bhagat Ji Special Noodles</h3>
+                            <p class="price">₹240</p>
+                        </div>
+                        <button class="add-to-cart" data-price="240">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Singapore Style Noodles">
+                        <div class="menu-item-flex">
+                            <h3>Singapore Style Noodles</h3>
                             <p class="price">₹210</p>
                         </div>
                         <button class="add-to-cart" data-price="210">+</button>
                     </div>
                 </div>
 
+                <div class="products">
+                    <div class="product" data-title="Singapore Style Noodles with Gravy">
+                        <div class="menu-item-flex">
+                            <h3>Singapore Style Noodles with Gravy</h3>
+                            <p class="price">₹245</p>
+                        </div>
+                        <button class="add-to-cart" data-price="245">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Chowmow Noodles">
+                        <div class="menu-item-flex">
+                            <h3>Chowmow Noodles</h3>
+                            <p class="price">₹180</p>
+                        </div>
+                        <button class="add-to-cart" data-price="180">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Crispy Noodles">
+                        <div class="menu-item-flex">
+                            <h3>Crispy Noodles</h3>
+                            <p class="price">₹180</p>
+                        </div>
+                        <button class="add-to-cart" data-price="180">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Noodles">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Noodles</h3>
+                            <p class="price">₹210</p>
+                        </div>
+                        <button class="add-to-cart" data-price="210">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mushroom Noodles">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Noodles</h3>
+                            <p class="price">₹210</p>
+                        </div>
+                        <button class="add-to-cart" data-price="210">+</button>
+                    </div>
+                </div>
+
+                <div class="category-name" id="fried-rice">
+                    <h1>FRIED RICE</h1>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Vegetable Fried Rice">
+                        <div class="menu-item-flex">
+                            <h3>Vegetable Fried Rice</h3>
+                            <p class="price">₹170</p>
+                        </div>
+                        <button class="add-to-cart" data-price="170">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Garlic Fried Rice">
+                        <div class="menu-item-flex">
+                            <h3>Garlic Fried Rice</h3>
+                            <p class="price">₹170</p>
+                        </div>
+                        <button class="add-to-cart" data-price="170">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Ginger Fried Rice">
+                        <div class="menu-item-flex">
+                            <h3>Ginger Fried Rice</h3>
+                            <p class="price">₹175</p>
+                        </div>
+                        <button class="add-to-cart" data-price="175">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Manchow Fried Rice">
+                        <div class="menu-item-flex">
+                            <h3>Manchow Fried Rice</h3>
+                            <p class="price">₹175</p>
+                        </div>
+                        <button class="add-to-cart" data-price="175">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Fried Rice">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Fried Rice</h3>
+                            <p class="price">₹210</p>
+                        </div>
+                        <button class="add-to-cart" data-price="210">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mushroom Fried Rice">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Fried Rice</h3>
+                            <p class="price">₹210</p>
+                        </div>
+                        <button class="add-to-cart" data-price="210">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Baryani">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Baryani</h3>
+                            <p class="price">₹280</p>
+                        </div>
+                        <button class="add-to-cart" data-price="280">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Veg. Baryani">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Baryani</h3>
+                            <p class="price">₹250</p>
+                        </div>
+                        <button class="add-to-cart" data-price="250">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Veg. Pulao">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Pulao</h3>
+                            <p class="price">₹175</p>
+                        </div>
+                        <button class="add-to-cart" data-price="175">+</button>
+                    </div>
+                </div>
+
+                <div class="category-name" id="indian-dishes">
+                    <h1>INDIAN DISHES</h1>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Tomato">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Tomato</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Handi">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Handi</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Butter Masala">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Butter Masala</h3>
+                            <p class="price">₹225</p>
+                        </div>
+                        <button class="add-to-cart" data-price="225">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Shahi Paneer">
+                        <div class="menu-item-flex">
+                            <h3>Shahi Paneer</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Paneer Korma">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Korma</h3>
+                            <p class="price">₹225</p>
+                        </div>
+                        <button class="add-to-cart" data-price="225">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Paneer Pasanda">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Pasanda</h3>
+                            <p class="price">₹225</p>
+                        </div>
+                        <button class="add-to-cart" data-price="225">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Paneer Begam Bahar">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Begam Bahar</h3>
+                            <p class="price">₹225</p>
+                        </div>
+                        <button class="add-to-cart" data-price="225">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Paneer Taka Tak Masala">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Taka Tak Masala</h3>
+                            <p class="price">₹230</p>
+                        </div>
+                        <button class="add-to-cart" data-price="230">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Paneer Burji">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Burji</h3>
+                            <p class="price">₹230</p>
+                        </div>
+                        <button class="add-to-cart" data-price="230">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Paneer Capsicum Masala">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Capsicum Masala</h3>
+                            <p class="price">₹240</p>
+                        </div>
+                        <button class="add-to-cart" data-price="240">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Karahi Paneer">
+                        <div class="menu-item-flex">
+                            <h3>Karahi Paneer</h3>
+                            <p class="price">₹240</p>
+                        </div>
+                        <button class="add-to-cart" data-price="240">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Palak Kotta">
+                        <div class="menu-item-flex">
+                            <h3>Palak Kotta</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Palak Paneer">
+                        <div class="menu-item-flex">
+                            <h3>Palak Paneer</h3>
+                            <p class="price">₹225</p>
+                        </div>
+                        <button class="add-to-cart" data-price="225">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Palak Matar">
+                        <div class="menu-item-flex">
+                            <h3>Palak Matar</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Matar Paneer">
+                        <div class="menu-item-flex">
+                            <h3>Matar Paneer</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Dal Makhani">
+                        <div class="menu-item-flex">
+                            <h3>Dal Makhani</h3>
+                            <p class="price">₹130</p>
+                        </div>
+                        <button class="add-to-cart" data-price="130">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Dal Fry">
+                        <div class="menu-item-flex">
+                            <h3>Dal Fry</h3>
+                            <p class="price">₹110</p>
+                        </div>
+                        <button class="add-to-cart" data-price="110">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Dal Handi">
+                        <div class="menu-item-flex">
+                            <h3>Dal Handi</h3>
+                            <p class="price">₹130</p>
+                        </div>
+                        <button class="add-to-cart" data-price="130">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Dal Balti">
+                        <div class="menu-item-flex">
+                            <h3>Dal Balti</h3>
+                            <p class="price">₹130</p>
+                        </div>
+                        <button class="add-to-cart" data-price="130">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Malal Kotta">
+                        <div class="menu-item-flex">
+                            <h3>Malal Kotta</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Cheese Kofta">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Kofta</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Shahi Kofta">
+                        <div class="menu-item-flex">
+                            <h3>Shahi Kofta</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Veg. Kofta">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Kofta</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Chana Masala">
+                        <div class="menu-item-flex">
+                            <h3>Chana Masala</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Paneer Chana">
+                        <div class="menu-item-flex">
+                            <h3>Paneer Chana</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Pindi Channa">
+                        <div class="menu-item-flex">
+                            <h3>Pindi Channa</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mushroom Matar">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Matar</h3>
+                            <p class="price">₹225</p>
+                        </div>
+                        <button class="add-to-cart" data-price="225">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mushroom Masala">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Masala</h3>
+                            <p class="price">₹225</p>
+                        </div>
+                        <button class="add-to-cart" data-price="225">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Shahi Mushroom">
+                        <div class="menu-item-flex">
+                            <h3>Shahi Mushroom</h3>
+                            <p class="price">₹225</p>
+                        </div>
+                        <button class="add-to-cart" data-price="225">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mushroom Do Piaza">
+                        <div class="menu-item-flex">
+                            <h3>Mushroom Do Piaza</h3>
+                            <p class="price">₹240</p>
+                        </div>
+                        <button class="add-to-cart" data-price="240">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Dam Aloo Bhojpuri">
+                        <div class="menu-item-flex">
+                            <h3>Dam Aloo Bhojpuri</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Stuffed Aloo Special">
+                        <div class="menu-item-flex">
+                            <h3>Stuffed Aloo Special</h3>
+                            <p class="price">₹230</p>
+                        </div>
+                        <button class="add-to-cart" data-price="230">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Dum Aloo Kashmiri">
+                        <div class="menu-item-flex">
+                            <h3>Dum Aloo Kashmiri</h3>
+                            <p class="price">₹230</p>
+                        </div>
+                        <button class="add-to-cart" data-price="230">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Stuffed Tomato">
+                        <div class="menu-item-flex">
+                            <h3>Stuffed Tomato</h3>
+                            <p class="price">₹230</p>
+                        </div>
+                        <button class="add-to-cart" data-price="230">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Alloo Matar">
+                        <div class="menu-item-flex">
+                            <h3>Alloo Matar</h3>
+                            <p class="price">₹145</p>
+                        </div>
+                        <button class="add-to-cart" data-price="145">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Bhagat Ji Spl. Mix Veg.">
+                        <div class="menu-item-flex">
+                            <h3>Bhagat Ji Spl. Mix Veg.</h3>
+                            <p class="price">₹240</p>
+                        </div>
+                        <button class="add-to-cart" data-price="240">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Mix Vegetable">
+                        <div class="menu-item-flex">
+                            <h3>Mix Vegetable</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Baked Vegetable">
+                        <div class="menu-item-flex">
+                            <h3>Baked Vegetable</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Boiled Vegetable">
+                        <div class="menu-item-flex">
+                            <h3>Boiled Vegetable</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Veg. Jalfrezi">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Jalfrezi</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Veg. Kolapuri">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Kolapuri</h3>
+                            <p class="price">₹220</p>
+                        </div>
+                        <button class="add-to-cart" data-price="220">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Plain Raita">
+                        <div class="menu-item-flex">
+                            <h3>Plain Raita</h3>
+                            <p class="price">₹60</p>
+                        </div>
+                        <button class="add-to-cart" data-price="60">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Veg. Raita">
+                        <div class="menu-item-flex">
+                            <h3>Veg. Raita</h3>
+                            <p class="price">₹95</p>
+                        </div>
+                        <button class="add-to-cart" data-price="95">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Pine Apple Raita">
+                        <div class="menu-item-flex">
+                            <h3>Pine Apple Raita</h3>
+                            <p class="price">₹120</p>
+                        </div>
+                        <button class="add-to-cart" data-price="120">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Onion Raita">
+                        <div class="menu-item-flex">
+                            <h3>Onion Raita</h3>
+                            <p class="price">₹95</p>
+                        </div>
+                        <button class="add-to-cart" data-price="95">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Aloo Raita">
+                        <div class="menu-item-flex">
+                            <h3>Aloo Raita</h3>
+                            <p class="price">₹85</p>
+                        </div>
+                        <button class="add-to-cart" data-price="85">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Boondi Raita">
+                        <div class="menu-item-flex">
+                            <h3>Boondi Raita</h3>
+                            <p class="price">₹85</p>
+                        </div>
+                        <button class="add-to-cart" data-price="85">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Zira Rice">
+                        <div class="menu-item-flex">
+                            <h3>Zira Rice</h3>
+                            <p class="price">₹120</p>
+                        </div>
+                        <button class="add-to-cart" data-price="120">+</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product" data-title="Plain Rice">
+                        <div class="menu-item-flex">
+                            <h3>Plain Rice</h3>
+                            <p class="price">₹110</p>
+                        </div>
+                        <button class="add-to-cart" data-price="110">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Missi Roti">
+                        <div class="menu-item-flex">
+                            <h3>Missi Roti</h3>
+                            <p class="price">₹35</p>
+                        </div>
+                        <button class="add-to-cart" data-price="35">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Chapati">
+                        <div class="menu-item-flex">
+                            <h3>Chapati</h3>
+                            <p class="price">₹10</p>
+                        </div>
+                        <button class="add-to-cart" data-price="10">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Butter Chapati">
+                        <div class="menu-item-flex">
+                            <h3>Butter Chapati</h3>
+                            <p class="price">₹15</p>
+                        </div>
+                        <button class="add-to-cart" data-price="15">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Butter Naan">
+                        <div class="menu-item-flex">
+                            <h3>Butter Naan</h3>
+                            <p class="price">₹35</p>
+                        </div>
+                        <button class="add-to-cart" data-price="35">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Plain Naan">
+                        <div class="menu-item-flex">
+                            <h3>Plain Naan</h3>
+                            <p class="price">₹30</p>
+                        </div>
+                        <button class="add-to-cart" data-price="30">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Kasuri Naan">
+                        <div class="menu-item-flex">
+                            <h3>Kasuri Naan</h3>
+                            <p class="price">₹35</p>
+                        </div>
+                        <button class="add-to-cart" data-price="35">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Cheese Naan">
+                        <div class="menu-item-flex">
+                            <h3>Cheese Naan</h3>
+                            <p class="price">₹150</p>
+                        </div>
+                        <button class="add-to-cart" data-price="150">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Veg Naan">
+                        <div class="menu-item-flex">
+                            <h3>Veg Naan</h3>
+                            <p class="price">₹120</p>
+                        </div>
+                        <button class="add-to-cart" data-price="120">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Garlic Naan">
+                        <div class="menu-item-flex">
+                            <h3>Garlic Naan</h3>
+                            <p class="price">₹50</p>
+                        </div>
+                        <button class="add-to-cart" data-price="50">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Kastoori Naan">
+                        <div class="menu-item-flex">
+                            <h3>Kastoori Naan</h3>
+                            <p class="price">₹45</p>
+                        </div>
+                        <button class="add-to-cart" data-price="45">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Lachha Paratha">
+                        <div class="menu-item-flex">
+                            <h3>Lachha Paratha</h3>
+                            <p class="price">₹45</p>
+                        </div>
+                        <button class="add-to-cart" data-price="45">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Pudhina Paratha">
+                        <div class="menu-item-flex">
+                            <h3>Pudhina Paratha</h3>
+                            <p class="price">₹45</p>
+                        </div>
+                        <button class="add-to-cart" data-price="45">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Papar Masala">
+                        <div class="menu-item-flex">
+                            <h3>Papar Masala</h3>
+                            <p class="price">₹60</p>
+                        </div>
+                        <button class="add-to-cart" data-price="60">+</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product" data-title="Papar Plain">
+                        <div class="menu-item-flex">
+                            <h3>Papar Plain</h3>
+                            <p class="price">₹25</p>
+                        </div>
+                        <button class="add-to-cart" data-price="25">+</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -673,9 +2023,11 @@
         <p class="total-price">Total: ₹<span class="total">0</span></p>
         <div class="cart-buttons">
             <button class="close-cart">Close</button>
-            <button class="proceed-to-checkout">Proceed to Checkout</button>
+            <!-- <button class="proceed-to-checkout">Proceed to Checkout</button> -->
+             <div style="background-color: #e3c38c; color: #000000; border: 1px solid #e3c38c; padding: 10px 10px; margin-bottom: 20px; width: 100%; font-size: 20px;">Free delivery Min. order ₹500</div>
         </div>
     </div>
+    
 
     <!-- FOOTER -->
 
@@ -685,10 +2037,14 @@
             <ul class="footer-nav">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="menu.html">MENU</a></li>
-                <li><a href="https://www.google.com/maps/place/Bhagat+Ji+Fast+Food/@31.1218076,76.1149928,17z/data=!3m1!4b1!4m6!3m5!1s0x391abdb8abe425e5:0x1bf4b0078fc6d3ab!8m2!3d31.1218076!4d76.1149928!16s%2Fg%2F1hd_7v65w?entry=ttu">MAPS</a></li>
-                <li><a href="https://www.google.com/maps/place/Bhagat+Ji+Fast+Food/@31.1218076,76.1149928,17z/data=!3m1!4b1!4m6!3m5!1s0x391abdb8abe425e5:0x1bf4b0078fc6d3ab!8m2!3d31.1218076!4d76.1149928!16s%2Fg%2F1hd_7v65w?entry=ttu">CALL US</a></li>
+                <li><a
+                        href="https://www.google.com/maps/place/Bhagat+Ji+Fast+Food/@31.1218076,76.1149928,17z/data=!3m1!4b1!4m6!3m5!1s0x391abdb8abe425e5:0x1bf4b0078fc6d3ab!8m2!3d31.1218076!4d76.1149928!16s%2Fg%2F1hd_7v65w?entry=ttu">MAPS</a>
+                </li>
+                <li><a
+                        href="https://www.google.com/maps/place/Bhagat+Ji+Fast+Food/@31.1218076,76.1149928,17z/data=!3m1!4b1!4m6!3m5!1s0x391abdb8abe425e5:0x1bf4b0078fc6d3ab!8m2!3d31.1218076!4d76.1149928!16s%2Fg%2F1hd_7v65w?entry=ttu">CALL
+                        US</a></li>
             </ul>
-            <p>Bhagat Ji Fast Food © 2024</p>
+            <p>Bhagat Ji Fast Food © 2025</p>
         </div>
         <div class="footer-middle">
             <h2>About Us:-</h2>
@@ -706,9 +2062,12 @@
             <h2>Socials:-</h2>
             <ul class="social-media">
                 <li><a href="https://www.instagram.com/bhagatjifastfood2000?igsh=NTc4MTIwNjQ2YQ==">• Instagram</a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=100064043973069&mibextid=ZbWKwL">• Facebook</a></li>
-                <li><a href="https://mail.google.com/mail/u/0/#inbox">• Gmail</a></li>
-                <li><a href="https://www.google.com/maps/place/Bhagat+Ji+Fast+Food/@31.1218076,76.1149928,17z/data=!3m1!4b1!4m6!3m5!1s0x391abdb8abe425e5:0x1bf4b0078fc6d3ab!8m2!3d31.1218076!4d76.1149928!16s%2Fg%2F1hd_7v65w?entry=ttu">• Maps</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100064043973069&mibextid=ZbWKwL">• Facebook</a>
+                </li>
+                <li>• Gmail</li>
+                <li><a
+                        href="https://www.google.com/maps/place/Bhagat+Ji+Fast+Food/@31.1218076,76.1149928,17z/data=!3m1!4b1!4m6!3m5!1s0x391abdb8abe425e5:0x1bf4b0078fc6d3ab!8m2!3d31.1218076!4d76.1149928!16s%2Fg%2F1hd_7v65w?entry=ttu">•
+                        Maps</a></li>
             </ul>
         </div>
     </footer>
