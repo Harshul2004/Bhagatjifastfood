@@ -26,16 +26,27 @@ A modern, responsive **Restaurant E-Commerce Website** built for **Bhagat Ji Fas
 ## 📂 Project Structure
 
 📁 bhagatji-fastfood/
+
 ├── 📄 checkout.css
+
 ├── 📄 checkout.html
+
 ├── 📄 checkout.js
+
 ├── 📄 index.css
+
 ├── 📄 index.html — Main landing page
+
 ├── 📄 index.js
+
 ├── 📄 menu.css
+
 ├── 📄 menu.html — Menu page with categories and search
+
 ├── 📄 menu.js
+
 └── 📄 README.md — Project description
+
 
 ---
 
